@@ -11,7 +11,6 @@ header.style.backgroundColor = "#000000";
 function buildNavbar() {
     let navbar = document.createElement("div");
     navbar.style.display = "flex";
-    // navbar.style.marginLeft = "60px";
     navbar.style.backgroundColor = "#000000";
     navbar.style.width = "100%";
     navbar.style.height = "30px";
@@ -20,7 +19,8 @@ function buildNavbar() {
     let logo = document.createElement("img");
     logo.src ="https://www.goatguns.com/cdn/shop/files/gold_goatgun_title-01.png?v=1672974313";
     logo.style.height = "25px";
-    logo.style.marginTop = "5px"
+    logo.style.marginTop = "5px";
+    logo.style.marginLeft = "60px";
     
     let options = [
         "GOATGUNS",
@@ -56,7 +56,7 @@ function buildNavbar() {
     searchBox.style.height = "30px";
     searchBox.style.borderRadius = "10px";
     searchBox.placeholder = "Search";
-    searchBox.style.marginLeft = "400px";
+    searchBox.style.marginLeft = "500px";
 
     let human = document.createElement("img");
     human.src = "https://www.pngkit.com/png/full/88-885453_login-white-on-clear-user-icon.png";
@@ -158,6 +158,7 @@ function buildlayout(){
     let sort = document.createElement("p");
     let sort_text = document.createTextNode("SORT BY:");
     sort.appendChild(sort_text)
+    sort.style.fontFamily = "sans-serif";
     sort.style.margin = "15px auto"; 
 
     let typeOption = ["ALL","AR15","AK47","AK12","1911","M16",".50","ROUNDS","ACCESSORIES"]
@@ -211,7 +212,7 @@ function buildItemCard(name, numreview, price, imageUrl) {
     <p style="margin-top: 5px; position:relative; right: -45px; top: -30px">${numreview}</p>
     <p style="margin-top: 5px; position:relative; top: -40px; color: rgb(0, 108, 229)">view detail</p>
     <p style="margin-top: 0px; position:relative; top: -40px; font-weight: 530">${price}</p>
-    <button style="border: none;border-radius: 8px;outline: 0;padding: 10px;color: black; background-color: rgb(245, 171, 48);text-align: center; cursor: pointer;width: 75%;font-size: 18px; position:relative; top: -40px">Add to Cart</button>
+    <button style="border: none;border-radius: 8px;outline: 0;padding: 10px;color: black; background-color: rgb(245, 171, 48);text-align: center; cursor: pointer;width: 70%;font-size: 18px; position:relative; top: -40px">Add to Cart</button>
     </div>
     `;
     return itemCard;

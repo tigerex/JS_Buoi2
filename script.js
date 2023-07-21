@@ -16,6 +16,8 @@ function buildNavbar() {
     navbar.style.height = "30px";
     navbar.style.paddingTop = "15px";
     navbar.style.paddingBottom = "15px";
+    navbar.style.zIndex = 9999
+
     let logo = document.createElement("img");
     logo.src ="https://www.goatguns.com/cdn/shop/files/gold_goatgun_title-01.png?v=1672974313";
     logo.style.height = "25px";
@@ -93,7 +95,9 @@ function buildBackgournd(){
     background_image.style.height = "350px";
     background_image.style.background = "url('https://www.goatguns.com/cdn/shop/t/46/assets/miniaturear15handguardsassembly--edited-1673985347938.jpg?v=1673985350') no-repeat center top";
     background_image.style.backgroundSize = "100%";
-    background_image.style.position = "sticky";
+    background_image.style.position = "fixed";
+    background_image.style.zIndex = 0
+    
 
     //where all them in-image-texts be
     let background_image_text = document.createElement("div");
@@ -145,15 +149,18 @@ function buildBackgournd(){
     return background_image
 }
 let background = buildBackgournd();
-container.appendChild(background);
+container.appendChild(background)
 
 function buildlayout(){
     //white empty space
     let display = document.createElement("div");
+    display.setAttribute("id","Display")
+    display.style.position = "relative"
+    display.style.top = "330px"
     // content_box.style.width = "100%";
     // content_box.style.height = "2000px"
     display.style.backgroundColor = "#ffffff"
-    display.style.margin = "auto 220px"
+    display.style.padding = "auto 220px"
 
     let sort = document.createElement("p");
     let sort_text = document.createTextNode("SORT BY:");
@@ -224,8 +231,13 @@ itemList.style.Gap = "10px";
 itemList.style.gridTemplateColumns = "repeat(auto-fit, minmax(350px, 1fr))";
 itemList.style.justifyContent = "center";
 
+
 let Cards_Space = document.createElement("div")
 Cards_Space.style.padding = "0px 170px 0px 170px";
+Cards_Space.style.backgroundColor = "#ffffff"
+Cards_Space.style.top = '310px'
+Cards_Space.style.zIndex = 9999
+Cards_Space.style.position = 'relative'
 
 let newItemCard1 = buildItemCard(
     "Masterkay",
